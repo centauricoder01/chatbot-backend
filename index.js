@@ -22,6 +22,9 @@ mongoose
     console.log(err.message);
   });
 
+app.get("/", (req, res) => {
+  res.send({ message: "Welcome Back" });
+});
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
